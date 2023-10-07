@@ -1,0 +1,21 @@
+@media (max-width: 992px) {
+    
+    header nav .links, header nav .action_btn {
+        display: none;
+    }
+
+    header nav .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    footer .group-1 {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 45px 0px;
+    }
+}

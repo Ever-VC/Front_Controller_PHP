@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'sans-serif';
+}
+
+body {
+    background-image: url('../imgs/Fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* --- HEADER ELEMENTS --- */
+
+header li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+header a:hover {
+    color: orange;
+}
+
+/* --- HEADER --- */
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+header nav {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav .links{
+    display: flex;
+    gap: 2rem;
+}
+
+header nav .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* --- DROPDOWN MENU --- */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: heigth .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- FOOTER --- */
+
+footer {
+    width: 100%;
+    background-color: #00000060;
+}
+
+footer .group-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 40px 0px;
+}
+
+footer .group-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .group-1 .box figure img {
+    width: 150px;
+}
+
+footer .group-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+footer .group-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+footer .group-1 .social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+footer .group-1 .social a:hover {
+    color: rgb(255, 136, 0);
+}
+
+footer .group-2 {
+    /* background-color: #0a1a2aae; */
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+footer .group-2 small {
+    font-size: 17px;
+}
+
+/* MAIN */
+
+main {
+    min-height: calc(100vh - 60px - 286px);
+}
+
+/* --- HERO --- */
+
+section#hero {
+    min-height: calc(100vh - 60px - 286px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 136, 0);
+}
+
+/* --- ANIMATION HOME --- */
+
+.blur-in-expand {
+    animation:blur-in-expand 0.4s linear both
+} 
+
+@keyframes blur-in-expand {
+    0% {
+        transform:scale(0);filter:blur(12px);opacity:0
+    }
+    100% {
+        transform:scale(1);filter:blur(0);opacity:1
+    }
+}
+
+/* --- CLIENTS --- */
+
+main .table {
+    width: 50%;
+    text-align: left;
+    background-color: #efefef38;
+    border-collapse: collapse;
+}
+
+main .table th, main .table td {
+    /* border: solid 1px black; */
+    padding: 15px;
+}
+
+main .table thead {
+    background-color: #246355bf;
+    border-bottom: solid 5px #0f362D;
+}
+
+main .table tr:nth-child(even) {
+    background-color: #dddddd42;
+}
+
+main .table tr:hover td {
+    background-color: rgba(255, 136, 0, 0.493);
+    /* color: rgb(255, 136, 0); */
+}
+
+main .table .btns {
+    text-align: center;
+}
+
+main .table .btns a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main .table .btns a:nth-child(1), main .table .btns a:nth-child(2) {
+    margin-right: 10px;
+}
+
+main .table .btns a:nth-child(1):hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+main .table .btns a:nth-child(2):hover {
+    color: greenyellow;
+    cursor: pointer;
+}
+
+main .table .btns a:nth-child(3):hover {
+    color: gold;
+    cursor: pointer;
+}
+
+/* --- CLIENT PROFILE --- */
+
+main .user-container {
+    width: 50%;
+    display: grid;
+    grid-template-areas: 
+        "image data"
+    ;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+}
+
+main .user-container .user-image {
+    grid-area: image;
+    background-color: #009db2bf;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+main .user-container .user-image img {
+    width: 300px;
+    margin: auto;
+}
+
+main .user-container .user-data {
+    grid-area: data;
+    display: grid;
+    grid-template-areas: 
+        "personal"
+        "products"
+    ;
+    grid-template-rows: auto;
+    gap: 5px;
+    text-align: left;
+}
+
+main .user-container .user-data  hr {
+    width: 576px;
+    margin-left: 10px;
+}
+
+main .user-container .user-data p {
+    margin: 10px;
+    padding: 5px;
+    background-color: #dddddd42;
+    border-radius: 10px;
+}
+
+.user-data .user-personal-data {
+    grid-area: personal;
+    background-color: #efefef38;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.user-data .fav-products {
+    grid-area: products;
+    background-color: #efefef38;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* --- NEW CLIENT --- */
+
+main .newUser-container {
+    width: 28%;
+    padding: 25px 30px;
+    background-color: #efefef38;
+    border-radius: 10px;
+}
+
+main .newUser-container .title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+main .newUser-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 12px 0;
+    text-align: left;
+}
+
+main .newUser-container  .form-group {
+    margin-bottom: 15px;
+    width: calc(100%2 - 20px);
+}
+
+main .newUser-container  .form-group p {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.form-group .input {
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    border-width: 2px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.form-group .products {
+    font-size: 16px;
+}
+
+.form-group .input:focus,
+.form-group .input:valid {
+    border-color: skyblue;
+}
+
+main .newUser-container .btn {
+    margin: 10px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    background: blue;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+
+main .newUser-container .btn:hover {
+    background: rgb(84, 192, 235);
+}
